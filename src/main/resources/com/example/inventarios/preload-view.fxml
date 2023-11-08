@@ -6,14 +6,14 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="240.0" prefWidth="320.0" styleClass="gradient-background" stylesheets="@styles/hello-style.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.inventarios.controllers.PreloadViewController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="240.0" prefWidth="320.0" style="-fx-background-radius: 10; -fx-border-radius: 10;" styleClass="gradient-background" stylesheets="@styles/hello-style.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.inventarios.controllers.PreloadViewController">
     <children>
-        <ImageView fx:id="fondo" fitHeight="18.0" fitWidth="256.0" layoutX="32.0" layoutY="143.0" pickOnBounds="true">
+        <ImageView fx:id="fondo" fitHeight="18.0" fitWidth="256.0" layoutX="32.0" layoutY="143.0" pickOnBounds="true" styleClass="shadow">
             <image>
                 <Image url="@../inventarios/image/fondo.gif" />
             </image>
         </ImageView>
-      <Label layoutX="85.0" layoutY="69.0" text="iniciando" textAlignment="CENTER">
+      <Label layoutX="85.0" layoutY="69.0" styleClass="shadow" text="iniciando" textAlignment="CENTER" textFill="WHITE">
          <font>
             <Font name="System Bold" size="34.0" />
          </font>

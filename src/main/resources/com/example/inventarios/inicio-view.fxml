@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="738.0" prefWidth="1196.0" stylesheets="@styles/hello-style.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.inventarios.controllers.InicioController">
+   <children>
+      <Label layoutX="392.0" layoutY="236.0" styleClass="shadow" text="Bienvenido" textFill="WHITE">
+         <font>
+            <Font name="DejaVu Sans Bold" size="80.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

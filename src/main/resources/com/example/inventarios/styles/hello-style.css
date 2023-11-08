@@ -2,7 +2,30 @@
     -fx-background-color: linear-gradient(from 25% 25% to 100% 100%, #D91F4E, #FF854C);
 }
 
+.line-color{
+    -fx-background-color: white;
+}
+
 .container{
     -fx-background-color: rgba(255, 255, 255, 0.2);
     -fx-background-radius: 10;
+}
+
+.textfield{
+    -fx-background-color: white;
+    -fx-background-radius: 10;
+}
+
+.mini-container-pink{
+    -fx-background-color: #D91F4E;
+    -fx-background-radius: 10;
+}
+
+.mini-container-orange{
+    -fx-background-color: #EF654B;
+    -fx-background-radius: 10;
+}
+
+.shadow{
+    -fx-effect: dropShadow(three-pass-box, rgba(0, 0, 0, 0.2), 10.0, 0.0, 0.0, 10.0);
 }

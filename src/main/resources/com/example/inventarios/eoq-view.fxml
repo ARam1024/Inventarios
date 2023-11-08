@@ -1,125 +1,509 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import java.lang.String?>
+<?import javafx.geometry.Insets?>
 <?import javafx.scene.chart.LineChart?>
 <?import javafx.scene.chart.NumberAxis?>
-<?import javafx.scene.control.Button?>
-<?import javafx.scene.control.ButtonBar?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
 <?import javafx.scene.control.Tab?>
 <?import javafx.scene.control.TabPane?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.ColumnConstraints?>
 <?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
 <?import javafx.scene.layout.RowConstraints?>
 <?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import org.kordamp.ikonli.javafx.FontIcon?>
 
-<TabPane prefHeight="738.0" prefWidth="1172.0" styleClass="gradient-background" stylesheets="@styles/hello-style.css" tabClosingPolicy="UNAVAILABLE" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.inventarios.controllers.QoptimaController">
+<TabPane prefHeight="768.0" prefWidth="1196.0" stylesheets="@styles/hello-style.css" tabClosingPolicy="UNAVAILABLE" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.inventarios.controllers.QoptimaController">
    <tabs>
-      <Tab text="EOQ">
+      <Tab styleClass="container" text="EOQ">
          <content>
-            <AnchorPane fx:id="tabEOQ" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
-               <children>
-                  <LineChart fx:id="GraficaEOQ" layoutX="367.0" layoutY="1.0" prefHeight="710.0" prefWidth="806.0">
-                     <xAxis>
-                        <NumberAxis side="BOTTOM" />
-                     </xAxis>
-                     <yAxis>
-                        <NumberAxis side="LEFT" />
-                     </yAxis>
-                  </LineChart>
-                  <VBox alignment="TOP_CENTER" layoutX="40.0" layoutY="29.0" prefHeight="200.0" prefWidth="234.0">
+            <ScrollPane>
+               <content>
+                  <VBox alignment="TOP_CENTER" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="1071.0" prefWidth="1184.0" spacing="10.0" styleClass="gradient-background">
                      <children>
-                        <Label text="Parametros" />
-                        <GridPane alignment="TOP_CENTER" prefHeight="122.0" prefWidth="305.0">
-                           <columnConstraints>
-                              <ColumnConstraints hgrow="SOMETIMES" maxWidth="147.4000244140625" minWidth="10.0" prefWidth="119.80001220703124" />
-                              <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" maxWidth="88.40003967285156" minWidth="6.800012207031244" prefWidth="16.80001831054686" />
-                              <ColumnConstraints hgrow="SOMETIMES" maxWidth="200.60001220703128" minWidth="10.0" prefWidth="85.20001220703125" />
-                              <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" maxWidth="136.40001220703124" minWidth="10.0" prefWidth="15.599987792968761" />
-                           </columnConstraints>
-                           <rowConstraints>
-                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                           </rowConstraints>
+                        <HBox alignment="CENTER" prefHeight="394.0" prefWidth="1184.0" spacing="20.0">
                            <children>
-                              <Label text="Demanda:" />
-                              <Label text="Costo Por Ordenar:" GridPane.rowIndex="1" />
-                              <Label text="Costo Por Mantener:" GridPane.rowIndex="2" />
-                              <TextField fx:id="DemandaTextField" text="15000" GridPane.columnIndex="2" />
-                              <TextField fx:id="C_OrdenarTextField" text="75.00" GridPane.columnIndex="2" GridPane.rowIndex="1" />
-                              <TextField fx:id="C_MantenerTextField" text="25.00" GridPane.columnIndex="2" GridPane.rowIndex="2" />
-                              <TextField fx:id="C_UnidadTextField" text="25.00" GridPane.columnIndex="2" GridPane.rowIndex="3" />
-                              <Label text="Costo Por unidad:" GridPane.rowIndex="3" />
-                              <Label text="\$" GridPane.columnIndex="1" GridPane.rowIndex="1" />
-                              <Label text="\$" GridPane.columnIndex="1" GridPane.rowIndex="2" />
-                              <Label text="\$" GridPane.columnIndex="1" GridPane.rowIndex="3" />
-                              <Label text="u" GridPane.columnIndex="3" />
+                              <VBox alignment="TOP_CENTER" prefHeight="500.0" prefWidth="400.0">
+                                 <children>
+                                    <Label text="Parametros" textFill="WHITE">
+                                       <font>
+                                          <Font name="System Bold Italic" size="14.0" />
+                                       </font>
+                                       <VBox.margin>
+                                          <Insets bottom="5.0" top="5.0" />
+                                       </VBox.margin>
+                                    </Label>
+                                    <Pane maxHeight="-Infinity" prefHeight="1.0" prefWidth="230.0" styleClass="line-color">
+                                       <VBox.margin>
+                                          <Insets bottom="10.0" left="10.0" right="10.0" />
+                                       </VBox.margin>
+                                    </Pane>
+                                    <GridPane alignment="TOP_CENTER" prefHeight="153.0" prefWidth="390.0">
+                                       <columnConstraints>
+                                          <ColumnConstraints hgrow="SOMETIMES" maxWidth="200.0" minWidth="10.0" prefWidth="174.4000244140625" />
+                                          <ColumnConstraints hgrow="SOMETIMES" maxWidth="206.39997558593754" minWidth="10.0" prefWidth="174.39997558593754" />
+                                       </columnConstraints>
+                                       <rowConstraints>
+                                          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                       </rowConstraints>
+                                       <children>
+                                          <Label text="Demanda:" textFill="WHITE">
+                                             <font>
+                                                <Font name="System Bold" size="12.0" />
+                                             </font>
+                                          </Label>
+                                          <Label text="Costo Por Ordenar:" textFill="WHITE" GridPane.rowIndex="1">
+                                             <font>
+                                                <Font name="System Bold" size="12.0" />
+                                             </font>
+                                          </Label>
+                                          <Label text="Costo Por Mantener:" textFill="WHITE" GridPane.rowIndex="2">
+                                             <font>
+                                                <Font name="System Bold" size="12.0" />
+                                             </font>
+                                          </Label>
+                                          <Label text="Costo Por unidad:" textFill="WHITE" GridPane.rowIndex="3">
+                                             <font>
+                                                <Font name="System Bold" size="12.0" />
+                                             </font>
+                                          </Label>
+                                          <HBox alignment="CENTER_RIGHT" prefHeight="100.0" prefWidth="200.0" spacing="10.0" styleClass="mini-container-pink" GridPane.columnIndex="1">
+                                             <children>
+                                                <TextField fx:id="DemandaTextField" styleClass="textfield" text="15000">
+                                                   <HBox.margin>
+                                                      <Insets />
+                                                   </HBox.margin></TextField>
+                                                <Label text="u" textFill="WHITE">
+                                                   <font>
+                                                      <Font name="System Bold Italic" size="12.0" />
+                                                   </font>
+                                                </Label>
+                                             </children>
+                                             <padding>
+                                                <Insets left="10.0" right="10.0" />
+                                             </padding>
+                                             <GridPane.margin>
+                                                <Insets bottom="2.5" top="2.5" />
+                                             </GridPane.margin>
+                                          </HBox>
+                                          <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0" spacing="10.0" styleClass="mini-container-pink" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                                             <children>
+                                                <Label text="\$" textFill="WHITE">
+                                                   <font>
+                                                      <Font name="System Bold Italic" size="12.0" />
+                                                   </font>
+                                                </Label>
+                                                <TextField fx:id="C_OrdenarTextField" styleClass="textfield" text="75.00" />
+                                             </children>
+                                             <padding>
+                                                <Insets left="10.0" right="10.0" />
+                                             </padding>
+                                             <GridPane.margin>
+                                                <Insets bottom="2.5" top="2.5" />
+                                             </GridPane.margin>
+                                          </HBox>
+                                          <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0" spacing="10.0" styleClass="mini-container-pink" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                                             <children>
+                                                <Label text="\$" textFill="WHITE">
+                                                   <font>
+                                                      <Font name="System Bold Italic" size="12.0" />
+                                                   </font>
+                                                </Label>
+                                                <TextField fx:id="C_MantenerTextField" styleClass="textfield" text="25.00" />
+                                             </children>
+                                             <padding>
+                                                <Insets left="10.0" right="10.0" />
+                                             </padding>
+                                             <GridPane.margin>
+                                                <Insets bottom="2.5" top="2.5" />
+                                             </GridPane.margin>
+                                          </HBox>
+                                          <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0" spacing="10.0" styleClass="mini-container-pink" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                                             <children>
+                                                <Label text="\$" textFill="WHITE">
+                                                   <font>
+                                                      <Font name="System Bold Italic" size="12.0" />
+                                                   </font>
+                                                </Label>
+                                                <TextField fx:id="C_UnidadTextField" styleClass="textfield" text="25.00" />
+                                             </children>
+                                             <opaqueInsets>
+                                                <Insets />
+                                             </opaqueInsets>
+                                             <padding>
+                                                <Insets left="10.0" right="10.0" />
+                                             </padding>
+                                             <GridPane.margin>
+                                                <Insets bottom="2.5" top="2.5" />
+                                             </GridPane.margin>
+                                          </HBox>
+                                          <Label fx:id="CalcularButton" alignment="CENTER" onMouseClicked="#EOQ" prefHeight="21.0" prefWidth="187.0" styleClass="mini-container-pink" text="Calcular" textFill="WHITE" GridPane.columnIndex="1" GridPane.rowIndex="4">
+                                             <GridPane.margin>
+                                                <Insets bottom="2.5" top="2.5" />
+                                             </GridPane.margin>
+                                             <font>
+                                                <Font name="System Bold" size="12.0" />
+                                             </font>
+                                          </Label>
+                                       </children>
+                                    </GridPane>
+                                    <HBox fx:id="RehacerButton" alignment="CENTER" onMouseClicked="#Rehacer" prefHeight="30.0" prefWidth="327.0" styleClass="mini-container-pink">
+                                       <children>
+                                          <Label text="Rehacer" textFill="WHITE">
+                                             <font>
+                                                <Font name="System Bold" size="12.0" />
+                                             </font>
+                                          </Label>
+                                          <FontIcon iconColor="WHITE" iconLiteral="bi-arrow-counterclockwise">
+                                             <font>
+                                                <Font name="System Bold" size="21.0" />
+                                             </font>
+                                          </FontIcon>
+                                       </children>
+                                       <VBox.margin>
+                                          <Insets bottom="2.5" top="7.5" />
+                                       </VBox.margin>
+                                    </HBox>
+                                 </children>
+                                 <HBox.margin>
+                                    <Insets />
+                                 </HBox.margin>
+                                 <padding>
+                                    <Insets left="10.0" right="10.0" />
+                                 </padding>
+                                 <styleClass>
+                                    <String fx:value="container" />
+                                    <String fx:value="shadow" />
+                                 </styleClass>
+                              </VBox>
+                              <VBox alignment="TOP_CENTER" prefHeight="374.0" prefWidth="400.0">
+                                 <children>
+                                    <Label text="Resultados" textFill="WHITE">
+                                       <VBox.margin>
+                                          <Insets bottom="5.0" top="5.0" />
+                                       </VBox.margin>
+                                       <font>
+                                          <Font name="System Bold Italic" size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <Pane maxHeight="-Infinity" prefHeight="1.0" prefWidth="230.0" styleClass="line-color">
+                                       <VBox.margin>
+                                          <Insets bottom="10.0" left="10.0" right="10.0" />
+                                       </VBox.margin>
+                                    </Pane>
+                                    <GridPane maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="280.0" prefWidth="379.0">
+                                       <columnConstraints>
+                                          <ColumnConstraints hgrow="SOMETIMES" maxWidth="245.6000244140625" minWidth="10.0" prefWidth="170.40001220703124" />
+                                          <ColumnConstraints hgrow="SOMETIMES" maxWidth="235.19998016357425" minWidth="10.0" prefWidth="171.19998779296878" />
+                                       </columnConstraints>
+                                       <rowConstraints>
+                                          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                       </rowConstraints>
+                                       <children>
+                                          <Label text="Cantidad Optima De Orden" textFill="WHITE">
+                                             <font>
+                                                <Font name="System Bold" size="12.0" />
+                                             </font></Label>
+                                          <Label text="Maximo Nivel De Inventario" textFill="WHITE" GridPane.rowIndex="1">
+                                             <font>
+                                                <Font name="System Bold" size="12.0" />
+                                             </font></Label>
+                                          <Label text="Inventario Promedio" textFill="WHITE" GridPane.rowIndex="2">
+                                             <font>
+                                                <Font name="System Bold" size="12.0" />
+                                             </font></Label>
+                                          <Label text="Ordenes Por Periodo (año)" textFill="WHITE" GridPane.rowIndex="3">
+                                             <font>
+                                                <Font name="System Bold" size="12.0" />
+                                             </font></Label>
+                                          <Label text="Costo Por Mantener:" textFill="WHITE" GridPane.rowIndex="4">
+                                             <font>
+                                                <Font name="System Bold" size="12.0" />
+                                             </font></Label>
+                                          <Label text="Costo Por Costo Por Ordenar:" textFill="WHITE" GridPane.rowIndex="5">
+                                             <font>
+                                                <Font name="System Bold" size="12.0" />
+                                             </font></Label>
+                                          <Label text="Costo del Inventario Total:" textFill="WHITE" GridPane.rowIndex="6">
+                                             <font>
+                                                <Font name="System Bold" size="12.0" />
+                                             </font></Label>
+                                          <Label text="Costo De Las Unidades:" textFill="WHITE" GridPane.rowIndex="7">
+                                             <font>
+                                                <Font name="System Bold" size="12.0" />
+                                             </font></Label>
+                                          <Label text="Costo Total Anual:" textFill="WHITE" GridPane.rowIndex="8">
+                                             <font>
+                                                <Font name="System Bold" size="12.0" />
+                                             </font></Label>
+                                          <HBox alignment="CENTER_RIGHT" prefHeight="100.0" prefWidth="200.0" spacing="10.0" styleClass="mini-container-orange" GridPane.columnIndex="1">
+                                             <children>
+                                                <TextField fx:id="QTextField" editable="false" styleClass="textfield" />
+                                                <Label text="u" textFill="WHITE">
+                                                   <font>
+                                                      <Font name="System Bold Italic" size="12.0" />
+                                                   </font>
+                                                </Label>
+                                             </children>
+                                             <padding>
+                                                <Insets left="10.0" right="10.0" />
+                                             </padding>
+                                             <GridPane.margin>
+                                                <Insets bottom="2.5" top="2.5" />
+                                             </GridPane.margin>
+                                          </HBox>
+                                          <HBox alignment="CENTER_RIGHT" prefHeight="100.0" prefWidth="200.0" spacing="10.0" styleClass="mini-container-orange" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                                             <children>
+                                                <TextField fx:id="I_maxTextField" editable="false" styleClass="textfield" />
+                                                <Label text="u" textFill="WHITE">
+                                                   <font>
+                                                      <Font name="System Bold Italic" size="12.0" />
+                                                   </font>
+                                                </Label>
+                                             </children>
+                                             <GridPane.margin>
+                                                <Insets bottom="2.5" top="2.5" />
+                                             </GridPane.margin>
+                                             <padding>
+                                                <Insets left="10.0" right="10.0" />
+                                             </padding>
+                                          </HBox>
+                                          <HBox alignment="CENTER_RIGHT" prefHeight="100.0" prefWidth="200.0" spacing="10.0" styleClass="mini-container-orange" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                                             <children>
+                                                <TextField fx:id="P_InventarioTextField" editable="false" styleClass="textfield" />
+                                                <Label text="u" textFill="WHITE">
+                                                   <font>
+                                                      <Font name="System Bold Italic" size="12.0" />
+                                                   </font>
+                                                </Label>
+                                             </children>
+                                             <GridPane.margin>
+                                                <Insets bottom="2.5" top="2.5" />
+                                             </GridPane.margin>
+                                             <padding>
+                                                <Insets left="10.0" right="10.0" />
+                                             </padding>
+                                          </HBox>
+                                          <HBox alignment="CENTER_RIGHT" prefHeight="100.0" prefWidth="200.0" spacing="10.0" styleClass="mini-container-orange" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                                             <children>
+                                                <TextField fx:id="OrdenesPeriodoTextField" editable="false" styleClass="textfield" />
+                                                <Label text="u" textFill="WHITE">
+                                                   <font>
+                                                      <Font name="System Bold Italic" size="12.0" />
+                                                   </font>
+                                                </Label>
+                                             </children>
+                                             <GridPane.margin>
+                                                <Insets bottom="2.5" top="2.5" />
+                                             </GridPane.margin>
+                                             <padding>
+                                                <Insets left="10.0" right="10.0" />
+                                             </padding>
+                                          </HBox>
+                                          <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0" spacing="10.0" styleClass="mini-container-orange" GridPane.columnIndex="1" GridPane.rowIndex="4">
+                                             <children>
+                                                <Label text="\$" textFill="WHITE">
+                                                   <font>
+                                                      <Font name="System Bold Italic" size="12.0" />
+                                                   </font>
+                                                </Label>
+                                                <TextField fx:id="C_A_Mantener" editable="false" styleClass="textfield" />
+                                             </children>
+                                             <GridPane.margin>
+                                                <Insets bottom="2.5" top="2.5" />
+                                             </GridPane.margin>
+                                             <padding>
+                                                <Insets left="10.0" right="10.0" />
+                                             </padding>
+                                          </HBox>
+                                          <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0" spacing="10.0" styleClass="mini-container-orange" GridPane.columnIndex="1" GridPane.rowIndex="5">
+                                             <children>
+                                                <Label text="\$" textFill="WHITE">
+                                                   <font>
+                                                      <Font name="System Bold Italic" size="12.0" />
+                                                   </font>
+                                                </Label>
+                                                <TextField fx:id="C_A_Ordenar" editable="false" styleClass="textfield" />
+                                             </children>
+                                             <padding>
+                                                <Insets left="10.0" right="10.0" />
+                                             </padding>
+                                             <GridPane.margin>
+                                                <Insets bottom="2.5" top="2.5" />
+                                             </GridPane.margin>
+                                          </HBox>
+                                          <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0" spacing="10.0" styleClass="mini-container-orange" GridPane.columnIndex="1" GridPane.rowIndex="6">
+                                             <children>
+                                                <Label text="\$" textFill="WHITE">
+                                                   <font>
+                                                      <Font name="System Bold Italic" size="12.0" />
+                                                   </font>
+                                                </Label>
+                                                <TextField fx:id="C_A_InventarioTextField" editable="false" styleClass="textfield" />
+                                             </children>
+                                             <padding>
+                                                <Insets left="10.0" right="10.0" />
+                                             </padding>
+                                             <GridPane.margin>
+                                                <Insets bottom="2.5" top="2.5" />
+                                             </GridPane.margin>
+                                          </HBox>
+                                          <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0" spacing="10.0" styleClass="mini-container-orange" GridPane.columnIndex="1" GridPane.rowIndex="7">
+                                             <children>
+                                                <Label text="\$" textFill="WHITE">
+                                                   <font>
+                                                      <Font name="System Bold Italic" size="12.0" />
+                                                   </font>
+                                                </Label>
+                                                <TextField fx:id="C_A_UnidadesTextField" editable="false" styleClass="textfield" />
+                                             </children>
+                                             <padding>
+                                                <Insets left="10.0" right="10.0" />
+                                             </padding>
+                                             <GridPane.margin>
+                                                <Insets bottom="2.5" top="2.5" />
+                                             </GridPane.margin>
+                                          </HBox>
+                                          <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0" spacing="10.0" styleClass="mini-container-orange" GridPane.columnIndex="1" GridPane.rowIndex="8">
+                                             <children>
+                                                <Label text="\$" textFill="WHITE">
+                                                   <font>
+                                                      <Font name="System Bold Italic" size="12.0" />
+                                                   </font>
+                                                </Label>
+                                                <TextField fx:id="C_A_TotalTextField" editable="false" styleClass="textfield" />
+                                             </children>
+                                             <padding>
+                                                <Insets left="10.0" right="10.0" />
+                                             </padding>
+                                             <GridPane.margin>
+                                                <Insets bottom="2.5" top="2.5" />
+                                             </GridPane.margin>
+                                          </HBox>
+                                       </children>
+                                    </GridPane>
+                                    <HBox fx:id="Grafica" alignment="CENTER" onMouseClicked="#GraficaEOQ" prefHeight="30.0" prefWidth="327.0" styleClass="mini-container-pink">
+                                       <children>
+                                          <Label text="Graficar" textFill="WHITE">
+                                             <font>
+                                                <Font name="System Bold" size="12.0" />
+                                             </font>
+                                          </Label>
+                                          <FontIcon iconColor="WHITE" iconLiteral="bi-bar-chart-fill">
+                                             <font>
+                                                <Font name="System Bold" size="21.0" />
+                                             </font>
+                                          </FontIcon>
+                                       </children>
+                                       <VBox.margin>
+                                          <Insets top="7.5" />
+                                       </VBox.margin>
+                                    </HBox>
+                                 </children>
+                                 <HBox.margin>
+                                    <Insets />
+                                 </HBox.margin>
+                                 <padding>
+                                    <Insets left="10.0" right="10.0" />
+                                 </padding>
+                                 <styleClass>
+                                    <String fx:value="container" />
+                                    <String fx:value="shadow" />
+                                 </styleClass>
+                              </VBox>
                            </children>
-                        </GridPane>
-                        <ButtonBar prefHeight="40.0" prefWidth="210.0">
-                           <buttons>
-                              <Button mnemonicParsing="false" onAction="#EOQ" prefHeight="26.0" prefWidth="99.0" text="Calcular" />
-                           </buttons>
-                        </ButtonBar>
+                           <VBox.margin>
+                              <Insets />
+                           </VBox.margin>
+                        </HBox>
+                        <Pane maxHeight="-Infinity" prefHeight="1.0" prefWidth="1169.0">
+                           <VBox.margin>
+                              <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                           </VBox.margin>
+                           <styleClass>
+                              <String fx:value="line-color" />
+                              <String fx:value="shadow" />
+                           </styleClass>
+                        </Pane>
+                        <LineChart fx:id="GraficaEOQ" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefWidth="1175.0">
+                           <xAxis>
+                              <NumberAxis label="Cantidad de Orden (Q)" side="BOTTOM" style="-fx-background-color: white;">
+                                 <tickLabelFont>
+                                    <Font name="System Bold Italic" size="8.0" />
+                                 </tickLabelFont></NumberAxis>
+                           </xAxis>
+                           <yAxis>
+                              <NumberAxis label="Costo ($)" side="LEFT">
+                                 <tickLabelFont>
+                                    <Font name="System Bold Italic" size="8.0" />
+                                 </tickLabelFont></NumberAxis>
+                           </yAxis>
+                           <styleClass>
+                              <String fx:value="textfield" />
+                              <String fx:value="shadow" />
+                           </styleClass>
+                        </LineChart>
+                        <HBox alignment="CENTER" prefHeight="34.0" prefWidth="1190.0" spacing="50.0">
+                           <children>
+                              <HBox alignment="CENTER" prefHeight="34.0" prefWidth="180.0" styleClass="container">
+                                 <children>
+                                    <Label text="Q Min:">
+                                       <HBox.margin>
+                                          <Insets right="5.0" />
+                                       </HBox.margin>
+                                    </Label>
+                                    <TextField fx:id="QMinTextField" alignment="CENTER" editable="false" prefWidth="112.0" text="1" />
+                                    <VBox alignment="CENTER" prefHeight="34.0" prefWidth="16.0">
+                                       <children>
+                                          <FontIcon iconColor="WHITE" iconLiteral="bi-arrow-up-circle-fill" onMouseClicked="#Aumentar_QMin" />
+                                          <FontIcon iconColor="WHITE" iconLiteral="bi-arrow-down-circle-fill" onMouseClicked="#Disminuir_QMin" />
+                                       </children>
+                                    </VBox>
+                                 </children>
+                              </HBox>
+                              <HBox alignment="CENTER" prefHeight="34.0" prefWidth="180.0" styleClass="container">
+                                 <children>
+                                    <Label text="Q Max:">
+                                       <HBox.margin>
+                                          <Insets right="5.0" />
+                                       </HBox.margin>
+                                    </Label>
+                                    <TextField fx:id="QMaxTextField" alignment="CENTER" editable="false" prefWidth="112.0" text="1" />
+                                    <VBox alignment="CENTER" prefHeight="34.0" prefWidth="16.0">
+                                       <children>
+                                          <FontIcon iconColor="WHITE" iconLiteral="bi-arrow-up-circle-fill" onMouseClicked="#Aumentar_QMax" />
+                                          <FontIcon iconColor="WHITE" iconLiteral="bi-arrow-down-circle-fill" onMouseClicked="#Disminuir_QMax" />
+                                       </children>
+                                    </VBox>
+                                 </children>
+                              </HBox>
+                           </children>
+                        </HBox>
                      </children>
                   </VBox>
-                  <VBox alignment="TOP_CENTER" layoutX="31.0" layoutY="243.0" prefHeight="292.0" prefWidth="352.0">
-                     <children>
-                        <Label text="Resultados" />
-                        <GridPane>
-                           <columnConstraints>
-                              <ColumnConstraints hgrow="SOMETIMES" maxWidth="178.79998779296875" minWidth="10.0" prefWidth="167.0" />
-                              <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" maxWidth="93.20001220703125" minWidth="10.0" prefWidth="18.19999999999999" />
-                              <ColumnConstraints hgrow="SOMETIMES" maxWidth="162.199951171875" minWidth="10.0" prefWidth="155.400048828125" />
-                              <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" maxWidth="94.2000732421875" minWidth="10.0" prefWidth="17.799951171875023" />
-                           </columnConstraints>
-                           <rowConstraints>
-                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                           </rowConstraints>
-                           <children>
-                              <Label text="Cantidad Optima De Orden" />
-                              <Label text="Maximo Nivel De Inventario" GridPane.rowIndex="1" />
-                              <Label text="Inventario Promedio" GridPane.rowIndex="2" />
-                              <Label text="Ordenes Por Periodo (anio)" GridPane.rowIndex="3" />
-                              <Label text="Costo Por Mantener:" GridPane.rowIndex="4" />
-                              <Label text="Costo Por Costo Por Ordenar:" GridPane.rowIndex="5" />
-                              <Label text="Costo del Inventario Total:" GridPane.rowIndex="6" />
-                              <Label text="Costo De Las Unidades:" GridPane.rowIndex="7" />
-                              <Label text="Costo Total Anual:" GridPane.rowIndex="8" />
-                              <TextField fx:id="QTextField" editable="false" GridPane.columnIndex="2" />
-                              <TextField fx:id="I_maxTextField" editable="false" GridPane.columnIndex="2" GridPane.rowIndex="1" />
-                              <TextField fx:id="P_InventarioTextField" editable="false" GridPane.columnIndex="2" GridPane.rowIndex="2" />
-                              <TextField fx:id="OrdenesPeriodoTextField" editable="false" GridPane.columnIndex="2" GridPane.rowIndex="3" />
-                              <TextField fx:id="C_A_Mantener" editable="false" GridPane.columnIndex="2" GridPane.rowIndex="4" />
-                              <TextField fx:id="C_A_Ordenar" editable="false" GridPane.columnIndex="2" GridPane.rowIndex="5" />
-                              <TextField fx:id="C_A_InventarioTextField" editable="false" GridPane.columnIndex="2" GridPane.rowIndex="6" />
-                              <TextField fx:id="C_A_UnidadesTextField" editable="false" GridPane.columnIndex="2" GridPane.rowIndex="7" />
-                              <TextField fx:id="C_A_TotalTextField" editable="false" GridPane.columnIndex="2" GridPane.rowIndex="8" />
-                              <Label text="\$" GridPane.columnIndex="1" GridPane.rowIndex="4" />
-                              <Label text="\$" GridPane.columnIndex="1" GridPane.rowIndex="5" />
-                              <Label text="\$" GridPane.columnIndex="1" GridPane.rowIndex="6" />
-                              <Label text="\$" GridPane.columnIndex="1" GridPane.rowIndex="7" />
-                              <Label text="\$" GridPane.columnIndex="1" GridPane.rowIndex="8" />
-                           </children>
-                        </GridPane>
-                     </children>
-                  </VBox>
-               </children>
-            </AnchorPane>
+               </content>
+            </ScrollPane>
          </content>
       </Tab>
-      <Tab text="Untitled Tab 2">
+      <Tab styleClass="container" text="Untitled Tab 2">
          <content>
             <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
          </content>

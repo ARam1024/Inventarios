@@ -36,12 +36,14 @@ public class PreloadViewController implements Initializable {
             fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("hello-view.fxml"));
             Scene scene = null;
             try {
-                scene = new Scene(fxmlLoader.load(),1280,768);
+                scene = new Scene(fxmlLoader.load(),1396,768);
             } catch (IOException e) {
                 throw new RuntimeException(e);
             }
             ventanaApp.setScene(scene);
+            ventanaApp.setMaximized(false);
             ventanaApp.setTitle("Pantalla principal");
+            //ventanaApp.getIcons();
             ventanaApp.show();
         });
     }
